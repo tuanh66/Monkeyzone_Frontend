@@ -1,0 +1,261 @@
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 0.2s;
+}
+header nav.header {
+  background-color: white;
+  position: relative;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+}
+
+header nav.header .header-container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.box-logo img {
+  width: 140px;
+  height: 40px;
+}
+
+.box-actions {
+  height: 100%;
+  display: none;
+}
+
+.box-menu-bar {
+  display: flex;
+}
+
+.box-icon {
+  background-color: var(--input-disable-color);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-icon-text {
+  color: var(--text-color);
+}
+
+.menu-list {
+  position: absolute;
+  height: 0;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: white;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 0 5px 5px -5px #00000033;
+}
+
+.menu-list .menu-category img {
+  width: 24px;
+}
+
+.box-menu {
+  cursor: pointer;
+}
+
+.box-menu:hover .menu-list {
+  height: 60px;
+  transition: 0.5s;
+}
+
+.menu-fix .menu-list {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  margin: auto;
+}
+
+.box-search {
+  display: none;
+  position: relative;
+}
+/* End Header */
+
+/* Menu Category */
+.menu-category li {
+  list-style: none;
+  background: white;
+}
+
+.menu-list a {
+  transition: 0.2s;
+  /*line-height: 60px;*/
+}
+
+.menu-category a .active {
+  background-color: var(--disable-switch-color);
+}
+.menu-category span {
+  color: var(--primary-color);
+}
+
+.menu-category a:hover div {
+  transition: 0.2s;
+  background-color: var(--disable-switch-color);
+}
+.menu-list .menu-category {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.menu-category ul {
+  margin: auto;
+}
+.menu-category .menu-category_fixm {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+#servicemobile .menu-category .menu-category-item img {
+  width: 32px;
+}
+
+/* End Menu Category */
+
+/* Search */
+.form-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#formSearchHeader {
+  width: 400px;
+}
+
+input[type="search"] {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px 4px 10px 12px;
+  background-color: var(--w-ghost-focus-color);
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+
+input[type="search"]::placeholder {
+  color: var(--text-blur);
+}
+
+input[type="search"]:focus {
+  outline: none;
+  color: var(--text-color);
+  border: 1px solid var(--border-default-color);
+  padding: 9px 3px 9px 11px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: url(../image/svg/search-cancel.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+input[type="search"].search {
+  padding-left: 40px;
+  background-image: url(../image/svg/icon-search.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 10px 50%;
+}
+
+input[type="search"].search:focus {
+  padding-left: 39px;
+  background-position: 9px 50%;
+}
+
+input[type="search"].has-submit {
+  padding-right: 44px;
+}
+
+input[type="search"].has-submit:focus {
+  padding-right: 43px;
+}
+
+input[type="search"].has-submit ~ button[type="submit"] {
+  background-color: var(--primary-color);
+  position: absolute;
+  padding: 16px;
+  border-radius: 8px;
+  outline: none;
+  right: 4px;
+}
+
+input[type="search"].has-submit ~ button[type="submit"]:hover {
+  background-color: var(--primary-hover-color);
+}
+
+input[type="search"].has-submit ~ button[type="submit"]:active {
+  background-color: var(--primary-focus-color);
+}
+
+input[type="search"].has-submit ~ button[type="submit"]:before {
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: url(../svg/icon-search.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}
+/* End Search */
+
+/* Giao diện PC tương đương với lg trong Tailwind */
+@media only screen and (min-width: 1024px) {
+  .box-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .box-search {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #formSearchHeader {
+    width: 200px;
+  }
+}
