@@ -88,6 +88,9 @@
                     </form>
 
                 </div>
+                <div class="box-user">
+                    <a href="btn primary handle-recharge-modal" class="">Nạp tiền</a>
+                </div>
             </div>
         </nav>
     </header>
