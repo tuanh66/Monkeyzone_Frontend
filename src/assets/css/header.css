@@ -175,7 +175,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: url(../image/svg/search-cancel.svg) no-repeat 50% 50%;
+  background: url(/src/assets/svg/search-cancel.svg) no-repeat 50% 50%;
   background-size: contain;
   opacity: 0;
   pointer-events: none;
@@ -189,7 +189,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 
 input[type="search"].search {
   padding-left: 40px;
-  background-image: url(../image/svg/icon-search.svg);
+  background-image: url(/src/assets/svg/icon-search.svg);
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 10px 50%;
@@ -235,7 +235,7 @@ input[type="search"].has-submit ~ button[type="submit"]:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-mask-image: url(../svg/icon-search.svg);
+  -webkit-mask-image: url(/src/assets/svg/icon-search.svg);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
