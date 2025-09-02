@@ -40,6 +40,7 @@ header nav.header .header-container {
   width: 40px;
   height: 40px;
   position: relative;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -142,10 +143,7 @@ header nav.header .header-container {
   display: flex;
   align-items: center;
   position: relative;
-}
-
-#formSearchHeader {
-  width: 400px;
+  width: 200px;
 }
 
 input[type="search"] {
@@ -244,7 +242,45 @@ input[type="search"].has-submit ~ button[type="submit"]:before {
 /* End box-search */
 
 /* box-user */
+.box-user {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
 
+.box__user-recharge {
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right: 16px;
+  height: 40px;
+}
+
+.box__user-notify {
+  position: relative;
+  display: flex;
+}
+
+.num-notify {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--invalid-color);
+  color: white;
+  border-radius: 100%;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  padding: 0 5px;
+}
+
+.box__user-account {
+  position: relative;
+  display: flex;
+  margin-left: 16px;
+}
 /* End box-user */
 
 /* Giao diện PC tương đương với lg trong Tailwind */
@@ -257,10 +293,27 @@ input[type="search"].has-submit ~ button[type="submit"]:before {
   .box-search {
     display: block;
   }
+
+  /* box-user */
+  .box__user-recharge {
+    display: block;
+    padding: 8px 20px;
+  }
+  /* End box-user */
 }
 
-@media only screen and (max-width: 1024px) {
-  #formSearchHeader {
-    width: 200px;
+/* Giao diện PC tương đương với xl trong Tailwind */
+@media (min-width: 1280px) {
+  /* box-search */
+  .form-search {
+    width: 400px;
   }
+  /* End box-search */
+
+  /* box-user */
+  .box__user-recharge {
+    display: block;
+    padding: 8px 34px;
+  }
+  /* End box-user */
 }

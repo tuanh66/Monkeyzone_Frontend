@@ -13,6 +13,11 @@ const routes = [
 		component: () => import("../components/Client/TrangChu/index.vue"),
 		meta: { layout: "client" },
 	},
+	{
+		path: "/nap-tien",
+		component: () => import("../components/Client/NapTien/index.vue"),
+		meta: { layout: "client" },
+	},
 	// {
 	// 	path: "/mua-acc",
 	// 	component: () => import("../components/Client/MuaAcc/index.vue"),

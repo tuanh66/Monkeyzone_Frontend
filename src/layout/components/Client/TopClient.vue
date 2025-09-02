@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <nav class="header">
-            <div class="container c-container header-container">
+            <div class="container header-container">
                 <div class="box-logo">
                     <router-link to="/">
                         <img src="../../../assets/svg/logo.svg" alt="">
@@ -17,7 +17,7 @@
                         </div>
                         <div class="menu-list">
                             <div class="menu-category">
-                                <div class="container c-container">
+                                <div class="container">
                                     <ul style="display: flex; justify-content: space-between; padding: 0; margin: auto;">
                                         <li class="w-100 c-px-4">
                                             <router-link to="/">
@@ -82,20 +82,32 @@
                     </div>
                 </div>
                 <div class="box-search">
-                    <form action="" class="form-search" id="formSearchHeader">
+                    <form action="" class="form-search">
                         <input type="search" placeholder="Tìm kiếm" class="has-submit" id="search-header-input">
                         <button type="submit"></button>
                     </form>
 
                 </div>
                 <div class="box-user">
-                    <a href="btn primary handle-recharge-modal" class="">Nạp tiền</a>
+                    <router-link to="/nap-tien" class="box__user-recharge btn">Nạp tiền</router-link>
+                    <div class="box__user-notify">
+                        <div class="box-icon">
+                            <img src="../../../assets/svg/ring.svg" alt="">
+                        </div>
+                        <p class="num-notify">0</p>
+                    </div>
+                    <div class="box__user-account">
+                        <div class="box-icon">
+                            <img src="../../../assets/svg/profile.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 </template>
 <script setup>
+import { RouterLink } from 'vue-router';
 import '../../../assets/css/header.css';
 </script>
 <style></style>

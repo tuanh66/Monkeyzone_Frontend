@@ -1,80 +1,112 @@
 :root {
-    --fw-bold: 700;
-    --fw-medium: 500;
-    --fw-regular: 400;
-    --primary-color: #0E3EDA;
-    --bg-color: white;
-    --primary-hover-color: #0B2FA6;
-    --primary-focus-color: #082480;
-    --primary-disable-color: #D0D7F3;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --primary-color: #0e3eda;
+  --bg-color: white;
+  --primary-hover-color: #0b2fa6;
+  --primary-focus-color: #082480;
+  --primary-disable-color: #d0d7f3;
 
-    --secondary-color: #F473B9;
-    --secondary-hover-color: #CC609B;
-    --secondary-focus-color: #A64E7D;
+  --secondary-color: #f473b9;
+  --secondary-hover-color: #cc609b;
+  --secondary-focus-color: #a64e7d;
 
-    --border-default-color: #E4E5F0;
-    --border-hover-color: #A7ABC3;
-    --global-font: 'Roboto';
-    --focus-color: #1990FF;
-    --text-color: #434657;
-    --text-title-color: #1B1D29;
-    --text-blur: #A7ABC3;
-    --invalid-color: #DA4343;
-    --input-disable-color: #F3F3F7;
-    --button-disable-color: #DCDEE9;
-    --button-text-disable-color: #A7ABC3;
-    --ghost-border-default-color: #BCBFD6;
-    --ghost-border-hover-color: #82869E;
-    --w-ghost-hover-color: #F8F8FC;
-    --w-ghost-focus-color: #F3F3F7;
-    --text-link-default-color: #82869E;
-    --text-link-hover-color: #1473CC;
-    --status-success-color: #30CD60;
-    --status-yellow-color: #FFA940;
-    --status-red-color: #F83142;
-    --status-sd-success-color: #F5FDF7;
-    --status-sd-danger-color: #FDF6F6;
-    --status-sd-yellow-color: #FFFBF5;
-    --status-sd-red-color: #FFF5F6;
-    --status-sd-blue-color: #E8F4FF;
-    --status-outline-red-color: #DF2C3B;
-    --disable-switch-color: #E8EBF9;
-    --bg-notify-color: #e3e3e3;
-    --box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --border-default-color: #e4e5f0;
+  --border-hover-color: #a7abc3;
+  --global-font: "Roboto";
+  --focus-color: #1990ff;
+  --text-color: #434657;
+  --text-title-color: #1b1d29;
+  --text-blur: #a7abc3;
+  --invalid-color: #da4343;
+  --input-disable-color: #f3f3f7;
+  --button-disable-color: #dcdee9;
+  --button-text-disable-color: #a7abc3;
+  --ghost-border-default-color: #bcbfd6;
+  --ghost-border-hover-color: #82869e;
+  --w-ghost-hover-color: #f8f8fc;
+  --w-ghost-focus-color: #f3f3f7;
+  --text-link-default-color: #82869e;
+  --text-link-hover-color: #1473cc;
+  --status-success-color: #30cd60;
+  --status-yellow-color: #ffa940;
+  --status-red-color: #f83142;
+  --status-sd-success-color: #f5fdf7;
+  --status-sd-danger-color: #fdf6f6;
+  --status-sd-yellow-color: #fffbf5;
+  --status-sd-red-color: #fff5f6;
+  --status-sd-blue-color: #e8f4ff;
+  --status-outline-red-color: #df2c3b;
+  --disable-switch-color: #e8ebf9;
+  --bg-notify-color: #e3e3e3;
+  --box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-    --text-cash-back: #E6983A;
-    --th-table-color: #FBFBFD;
+  --text-cash-back: #e6983a;
+  --th-table-color: #fbfbfd;
 
-    --filter-text-color: invert(25%) sepia(17%) saturate(560%) hue-rotate(194deg) brightness(97%) contrast(90%);
-    --filter-primary-color: invert(22%) sepia(98%) saturate(2861%) hue-rotate(225deg) brightness(81%) contrast(115%);
-    --filter-focus-color: invert(48%) sepia(75%) saturate(2985%) hue-rotate(190deg) brightness(98%) contrast(107%);
-    --filter-link-default-color: invert(53%) sepia(19%) saturate(394%) hue-rotate(194deg) brightness(98%) contrast(80%);
-    --filter-link-hover-color: invert(33%) sepia(74%) saturate(1284%) hue-rotate(185deg) brightness(95%) contrast(96%);
-    --filter-button-disable-color: invert(84%) sepia(6%) saturate(259%) hue-rotate(193deg) brightness(106%) contrast(92%);
+  --filter-text-color: invert(25%) sepia(17%) saturate(560%) hue-rotate(194deg)
+    brightness(97%) contrast(90%);
+  --filter-primary-color: invert(22%) sepia(98%) saturate(2861%)
+    hue-rotate(225deg) brightness(81%) contrast(115%);
+  --filter-focus-color: invert(48%) sepia(75%) saturate(2985%)
+    hue-rotate(190deg) brightness(98%) contrast(107%);
+  --filter-link-default-color: invert(53%) sepia(19%) saturate(394%)
+    hue-rotate(194deg) brightness(98%) contrast(80%);
+  --filter-link-hover-color: invert(33%) sepia(74%) saturate(1284%)
+    hue-rotate(185deg) brightness(95%) contrast(96%);
+  --filter-button-disable-color: invert(84%) sepia(6%) saturate(259%)
+    hue-rotate(193deg) brightness(106%) contrast(92%);
 }
 
 body {
-    font-family: var(--global-font), sans-serif;
-    font-style: normal;
-    color: var(--text-color);
-    line-height: 20px;
-    font-size: 13px;
+  font-family: var(--global-font), sans-serif;
+  font-style: normal;
+  color: var(--text-color);
+  line-height: 20px;
+  font-size: 13px;
 }
 
 .btn {
-    cursor: pointer;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .container {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 100%;
-    margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
-    .c-container {
-        max-width: 1264px;
-    }
+/* Giao diện PC tương đương với sm trong Tailwind */
+@media (min-width: 640px) {
+  .container {
+    max-width: 540px;
+  }
+}
 
+/* Giao diện PC tương đương với md trong Tailwind */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/* Giao diện PC tương đương với lg trong Tailwind */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Giao diện PC tương đương với xl trong Tailwind */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1264px;
+  }
 }
