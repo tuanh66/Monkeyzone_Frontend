@@ -8,6 +8,5 @@
 <script setup>
 import TopClient from '../../components/Client/TopClient.vue'
 
-
 </script>
 <style></style>

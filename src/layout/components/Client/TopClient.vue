@@ -91,13 +91,13 @@
                 <div class="box-user">
                     <router-link to="/nap-tien" class="box__user-recharge btn">Nạp tiền</router-link>
                     <div class="box__user-notify">
-                        <div class="box-icon">
+                        <div class="box-icon brs-8">
                             <img src="../../../assets/svg/ring.svg" alt="">
                         </div>
                         <p class="num-notify">0</p>
                     </div>
                     <div class="box__user-account">
-                        <div class="box-icon">
+                        <div class="box-icon brs-8">
                             <img src="../../../assets/svg/profile.svg" alt="">
                         </div>
                     </div>

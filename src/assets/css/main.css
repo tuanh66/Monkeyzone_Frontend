@@ -75,6 +75,17 @@ body {
   border-radius: 0.5rem;
   box-sizing: border-box;
   text-align: center;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.card {
+  border: 1px solid var(--border-default-color);
+  box-shadow: var(--box-shadow-default);
+  border-radius: 12px;
 }
 
 .container {
