@@ -57,10 +57,33 @@
                 </div>
             </div>
         </div>
+        <div class="banner-swiper">
+            <Swiper :modules="[Autoplay, Pagination, Navigation]" :loop="true"
+                :autoplay="{ delay: 3000, disableOnInteraction: false }" :pagination="{ clickable: true }"
+                :navigation="{ nextEl: '.banner-next', prevEl: '.banner-prev' }">
+                <SwiperSlide>
+                    <a href="#" class="Banner1">
+                        <img src="../../../assets/image/banner.png" alt="">
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <a href="#" class="Banner2">
+                        <img src="../../../assets/image/banner.png" alt="">
+                    </a>
+                </SwiperSlide>
+                <div class="banner-prev"></div>
+                <div class="banner-next"></div>
+            </Swiper>
+        </div>
     </div>
 </template>
 <script setup>
-
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/grid';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 </script>
 <style>
 .account-banner {
@@ -68,20 +91,16 @@
     padding-bottom: 12px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     margin: 0 -15px;
 }
 
 .account-card {
-    flex: 0 0 25%;
-    max-width: 25%;
+    margin-top: 16px;
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.card {
-    height: 368.59px;
 }
 
 .account-card__header {
@@ -112,14 +131,14 @@
 }
 
 .account-list__item {
-    height: 40px;
+    height: 30px;
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     padding: 0 15px;
 }
 
 .account-list__item:nth-child(-n+3) p:first-child {
-    background: url(../../../assets/image/star.png);
+    background-image: url(../../../assets/image/star.png);
     float: left;
     font-size: 14px;
     font-style: normal;
@@ -193,5 +212,119 @@
     color: #fff;
     text-align: center;
     margin-bottom: 12px;
+}
+
+.banner-swiper {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.banner-swiper .swiper-slide {
+    position: relative;
+    padding-bottom: 40%;
+    border-radius: 100%;
+}
+
+.banner-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 12px;
+    z-index: 100;
+}
+
+.banner-prev {
+    display: none;
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../../assets/svg/navigation-swiper.svg);
+    background-color: rgba(220, 222, 233, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 100% 100% 0;
+    cursor: pointer;
+    z-index: 10;
+    visibility: visible;
+}
+
+.banner-next {
+    display: none;
+    position: absolute;
+    top: 48%;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../../assets/svg/navigation-swiper.svg);
+    background-color: rgba(220, 222, 233, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 100% 100% 0;
+    cursor: pointer;
+    z-index: 10;
+    visibility: visible;
+    transform: rotate(-180deg);
+}
+
+.banner-swiper .swiper-pagination {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 4px;
+}
+
+.banner-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 16px;
+    height: 8px;
+    border-radius: 100px;
+    background: var(--primary-color);
+    transition: .2s;
+}
+
+.banner-swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #FFFFFF;
+    opacity: 1;
+    transition: .2s;
+    border: none;
+    margin: 0 4px;
+}
+
+
+/* Giao diện PC tương đương với lg trong Tailwind */
+@media (min-width: 1024px) {
+    .account-card {
+        margin-top: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .account-list__item {
+        height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .banner-swiper {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .account-banner {
+        flex-direction: unset;
+    }
+
+    .banner-prev {
+        display: block;
+    }
+
+    .banner-next {
+        display: block;
+    }
 }
 </style>
